@@ -1,0 +1,273 @@
+/* BASIC RESETS*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+}
+
+/* HEADER STYLES */
+header {
+  padding: 1rem 1rem 0 1rem;
+  font-size: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+header h1 {
+  margin: 2rem 0 1rem;
+  color: #333;
+  font-weight: 400;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form .city-name {
+  padding: 1rem;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-family: inherit;
+  margin: 0 1rem 0;
+}
+
+form button {
+  padding: 1rem;
+  width: 150px;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #fff;
+  color: #333;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #f0f0f0;
+}
+
+form button:active {
+  background-color: #e0e0e0;
+}
+
+header .current-time {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 3rem;
+  margin-top: 1rem;
+}
+
+/* MAIN STYLES */
+main {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+/* GLOBAL CONTAINER */
+.global-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-container img {
+  width: 50%;
+}
+
+/* WEATHER DETAILS */
+.global-container .details {
+  width: 50%;
+  text-align: left;
+}
+
+.weather-status {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.temperature {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.date-of-day {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+/* DETAILED CONTAINER */
+.detailed-container {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  background-color: #fff;
+  border-radius: 1.5rem;
+  margin: 0 1rem 0;
+  padding: 1rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.info-item .info-icon {
+  color: #555;
+}
+
+.info-item h3 {
+  font-size: 0.8rem;
+  color: #333;
+  margin-top: 0.5rem;
+}
+
+.info-item p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* SUN CONTAINER */
+.sun-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  margin: 0 1rem 0;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+.sun-rise,
+.sun-set {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-rise h3,
+.sun-set h3 {
+  font-size: 0.8rem;
+  color: #5c5b5b;
+  font-weight: 500;
+}
+
+.sun-rise p,
+.sun-set p {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 700;
+}
+
+/* 5-DAYS FORECAST CONTAINER */
+.forecast-container {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.day-of-week {
+  background-color: white;
+  border-radius: 1rem;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  padding: 1rem 0;
+}
+
+.day-of-week .day {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgb(77, 74, 74);
+}
+
+.day-of-week .temp {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(77, 74, 74);
+}
+
+/* LOADING AND ERROR MESSAGES STYLES */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 4rem;
+}
+
+/* BACKGROUND STYLES ACCORDING TO WEATHER CONDITION */
+.clear {
+  background-color: rgb(241, 241, 221);
+}
+
+.clouds {
+  background-color: #dadcdd;
+}
+
+.rain {
+  background-color: #b1dceb;
+}
+
+.storm {
+  background-color: #304e66;
+}
+
+.snow {
+  background-color: #f0f8ff;
+}
+
+.fog {
+  background-color: #646161;
+}
+
+.default {
+  background-color: #e0e0e0;
+}
+
+/* NIGHT BACKGROUND */
+.night {
+  background-color: #2c3e50;
+}
+.night h1,
+.night .current-time,
+.night .weather-status,
+.night .temperature,
+.night .date-of-day {
+  color: #ecf0f1;
+}
