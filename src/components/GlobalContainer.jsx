@@ -8,7 +8,7 @@ function GlobalContainer(props) {
         src={
           props.isNight(props.data) === false
             ? props.getWeatherIcon(props.data.weather[0].main)
-            : "/icons/moon.svg"
+            : `${BASE}/icons/moon.svg`
         }
         alt="weather icon"
       />
