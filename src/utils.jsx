@@ -1,30 +1,32 @@
 /* Returns the appropriate weather icon based on the condition */
+const BASE = import.meta.env.BASE_URL;
+
 function getWeatherIcon(condition) {
   switch (condition) {
     case "Clear":
-      return "/icons/clear-day.svg";
+      return `${BASE}/icons/clear-day.svg`;
 
     case "Clouds":
-      return "/icons/cloudy.svg";
+      return `${BASE}/icons/cloudy.svg`;
 
     case "Rain":
-      return "/icons/rain.svg";
+      return `${BASE}/icons/rain.svg`;
 
     case "Drizzle":
-      return "/icons/drizzle.svg";
+      return `${BASE}/icons/drizzle.svg`;
 
     case "Thunderstorm":
-      return "/icons/thunderstorms.svg";
+      return `${BASE}/icons/thunderstorms.svg`;
 
     case "Snow":
-      return "/icons/snow.svg";
+      return `${BASE}/icons/snow.svg`;
 
     case "Mist":
     case "Fog":
-      return "/icons/fog.svg";
+      return `${BASE}/icons/fog.svg`;
 
     default:
-      return "/icons/clear-day.svg";
+      return `${BASE}/icons/clear-day.svg`;
   }
 }
 
