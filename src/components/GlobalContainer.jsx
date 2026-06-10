@@ -1,4 +1,5 @@
 import React from "react";
+const BASE = import.meta.env.BASE_URL;
 
 function GlobalContainer(props) {
   return (
